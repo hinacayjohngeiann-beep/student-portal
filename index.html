@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5b55d9">
+  <title>Campusly — Student Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Campusly home"><span class="brand-mark">c</span><span>campusly</span></a>
+      <div class="school-label">STUDENT WORKSPACE</div>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">▦</span>Dashboard</button>
+        <button class="nav-link" data-page="schedule"><span class="nav-icon">▤</span>Class schedule</button>
+        <button class="nav-link" data-page="grades"><span class="nav-icon">▥</span>Grades</button>
+        <button class="nav-link" data-page="announcements"><span class="nav-icon">◉</span>Announcements <span class="nav-count">3</span></button>
+        <button class="nav-link" data-page="profile"><span class="nav-icon">♙</span>My profile</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Need a hand?</strong><p>Find answers to common student questions.</p><a href="mailto:registrar@example.edu">Contact support ↗</a></div>
+        <div class="sidebar-user"><div class="avatar small">SP</div><div><strong>Szarina Palaca</strong><span>Student account</span></div><button id="sidebarProfile" aria-label="Open profile">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="pageCrumb">Dashboard</strong></div>
+        <div class="top-actions"><span class="term-pill"><span class="live-dot"></span> 1st Semester · AY 2026–2027</span><button class="icon-button notification-button" id="notificationBtn" aria-label="View notifications">♧<i></i></button><div class="avatar">SP</div></div>
+      </header>
+
+      <section class="page active-page" id="dashboard">
+        <div class="welcome-row"><div><p class="eyebrow" id="todayLabel">WEDNESDAY, NOVEMBER 25, 2026</p><h1>Good afternoon, Szarina <span class="wave">✦</span></h1><p class="subheading">Here’s what’s happening with your studies today.</p></div><button class="primary-button" data-go="schedule">View my schedule <span>→</span></button></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Enrolled courses</span><span class="stat-icon purple">▤</span></div><strong>6</strong><small><span class="positive">●</span> Active this semester</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Current GPA</span><span class="stat-icon mint">✧</span></div><strong>1.75</strong><small><span class="positive">↑ 0.10</span> From last semester</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Attendance</span><span class="stat-icon peach">◷</span></div><strong>96.8%</strong><small>Across all enrolled courses</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Pending tasks</span><span class="stat-icon blue">☷</span></div><strong>4</strong><small>Due within the next 7 days</small></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel schedule-panel"><div class="panel-heading"><div><h2>Today’s schedule</h2><p>Your classes for Wednesday</p></div><button class="text-button" data-go="schedule">Full schedule →</button></div>
+            <div class="today-list">
+              <div class="class-item"><div class="time-col"><strong>08:00</strong><span>09:30 AM</span></div><div class="class-line purple-line"></div><div class="class-info"><strong>Systems Analysis & Design</strong><span>Room 302 · Mr. D. Reyes</span></div><span class="class-tag">Lecture</span></div>
+              <div class="class-item"><div class="time-col"><strong>10:00</strong><span>11:30 AM</span></div><div class="class-line mint-line"></div><div class="class-info"><strong>Web Development</strong><span>Computer Lab 2 · Ms. A. Cruz</span></div><span class="class-tag lab">Laboratory</span></div>
+              <div class="class-item"><div class="time-col"><strong>01:00</strong><span>02:30 PM</span></div><div class="class-line peach-line"></div><div class="class-info"><strong>Business Analytics</strong><span>Room 205 · Mrs. L. Garcia</span></div><span class="class-tag">Lecture</span></div>
+            </div>
+          </article>
+          <article class="panel announcement-panel"><div class="panel-heading"><div><h2>Latest announcements</h2><p>Updates from your campus</p></div><button class="text-button" data-go="announcements">View all →</button></div>
+            <div class="announcement-list">
+              <div class="announcement"><span class="announcement-dot violet"></span><div><span class="announcement-meta">ACADEMIC OFFICE · 2 HOURS AGO</span><strong>Final examination schedule released</strong><p>Check the updated examination timetable for your enrolled subjects.</p></div></div>
+              <div class="announcement"><span class="announcement-dot green"></span><div><span class="announcement-meta">STUDENT AFFAIRS · YESTERDAY</span><strong>Student organization week</strong><p>Registration for campus organizations is now open.</p></div></div>
+              <div class="announcement"><span class="announcement-dot orange"></span><div><span class="announcement-meta">LIBRARY · NOV 22, 2026</span><strong>Extended library hours</strong><p>The library will remain open until 8:00 PM during exam week.</p></div></div>
+            </div>
+          </article>
+        </div>
+        <article class="panel courses-panel"><div class="panel-heading"><div><h2>My courses</h2><p>Your enrolled subjects this semester</p></div><button class="text-button" data-go="grades">See grades →</button></div><div class="course-grid">
+          <div class="course-card"><span class="course-symbol purple-bg">⌘</span><div><strong>Systems Analysis & Design</strong><span>IT 301 · 3 units</span></div><b>1.50</b></div>
+          <div class="course-card"><span class="course-symbol mint-bg">⌁</span><div><strong>Web Development</strong><span>IT 302 · 3 units</span></div><b>1.75</b></div>
+          <div class="course-card"><span class="course-symbol peach-bg">▥</span><div><strong>Business Analytics</strong><span>BA 201 · 3 units</span></div><b>1.75</b></div>
+          <div class="course-card"><span class="course-symbol blue-bg">◈</span><div><strong>Information Assurance</strong><span>IT 303 · 3 units</span></div><b>2.00</b></div>
+        </div></article>
+        <footer>© 2026 Campusly Student Portal <span>Made for your academic journey.</span></footer>
+      </section>
+
+      <section class="page" id="schedule"><div class="page-heading"><div><p class="eyebrow">PLAN YOUR WEEK</p><h1>Class schedule</h1><p class="subheading">Keep track of your classes, rooms, and instructors.</p></div><button class="outline-button" id="printSchedule">↧ <span>Print schedule</span></button></div>
+        <article class="panel"><div class="panel-heading"><div><h2>Weekly timetable</h2><p>1st Semester · AY 2026–2027</p></div><span class="term-pill">Monday – Friday</span></div>
+          <div class="table-wrap"><table class="data-table"><thead><tr><th>TIME</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th></tr></thead><tbody>
+            <tr><th>8:00 – 9:30</th><td><span class="timetable-class purple-cell">Systems Analysis<small>Room 302</small></span></td><td>—</td><td><span class="timetable-class purple-cell">Systems Analysis<small>Room 302</small></span></td><td>—</td><td><span class="timetable-class purple-cell">Systems Analysis<small>Room 302</small></span></td></tr>
+            <tr><th>10:00 – 11:30</th><td>—</td><td><span class="timetable-class mint-cell">Web Development<small>Computer Lab 2</small></span></td><td><span class="timetable-class mint-cell">Web Development<small>Computer Lab 2</small></span></td><td><span class="timetable-class mint-cell">Web Development<small>Computer Lab 2</small></span></td><td>—</td></tr>
+            <tr><th>1:00 – 2:30</th><td><span class="timetable-class peach-cell">Business Analytics<small>Room 205</small></span></td><td>—</td><td><span class="timetable-class peach-cell">Business Analytics<small>Room 205</small></span></td><td>—</td><td><span class="timetable-class peach-cell">Business Analytics<small>Room 205</small></span></td></tr>
+            <tr><th>3:00 – 4:30</th><td>—</td><td><span class="timetable-class blue-cell">Information Assurance<small>Room 401</small></span></td><td>—</td><td><span class="timetable-class blue-cell">Information Assurance<small>Room 401</small></span></td><td><span class="timetable-class blue-cell">Information Assurance<small>Room 401</small></span></td></tr>
+          </tbody></table></div>
+        </article><div class="schedule-note"><span>✦</span><div><strong>Quick reminder</strong><p>Arrive 10 minutes before your class starts. Laboratory sessions require your student ID.</p></div></div>
+        <footer>© 2026 Campusly Student Portal <span>Made for your academic journey.</span></footer>
+      </section>
+
+      <section class="page" id="grades"><div class="page-heading"><div><p class="eyebrow">ACADEMIC PERFORMANCE</p><h1>My grades</h1><p class="subheading">Review your academic progress for this semester.</p></div><button class="outline-button" id="printGrades">↧ <span>Print grades</span></button></div>
+        <div class="grade-summary"><article class="grade-highlight"><span>SEMESTER GPA</span><strong>1.75</strong><p>Very good standing</p><div class="grade-decoration">✧</div></article><article class="stat-card"><span class="muted">Total units enrolled</span><strong>18</strong><small>6 subjects this semester</small></article><article class="stat-card"><span class="muted">Completed units</span><strong>12</strong><small>As of November 25, 2026</small></article></div>
+        <article class="panel"><div class="panel-heading"><div><h2>Grade breakdown</h2><p>Preliminary grades · Subject to registrar validation</p></div><span class="status-pill">● Updated</span></div><div class="table-wrap"><table class="data-table grades-table"><thead><tr><th>SUBJECT</th><th>CODE</th><th>UNITS</th><th>PRELIMINARY</th><th>STATUS</th></tr></thead><tbody>
+          <tr><td><strong>Systems Analysis & Design</strong></td><td>IT 301</td><td>3</td><td><b>1.50</b></td><td><span class="grade-status">In progress</span></td></tr>
+          <tr><td><strong>Web Development</strong></td><td>IT 302</td><td>3</td><td><b>1.75</b></td><td><span class="grade-status">In progress</span></td></tr>
+          <tr><td><strong>Business Analytics</strong></td><td>BA 201</td><td>3</td><td><b>1.75</b></td><td><span class="grade-status">In progress</span></td></tr>
+          <tr><td><strong>Information Assurance</strong></td><td>IT 303</td><td>3</td><td><b>2.00</b></td><td><span class="grade-status">In progress</span></td></tr>
+          <tr><td><strong>Object-Oriented Programming</strong></td><td>IT 204</td><td>3</td><td><b>1.50</b></td><td><span class="grade-status">In progress</span></td></tr>
+          <tr><td><strong>Physical Education 4</strong></td><td>PE 104</td><td>3</td><td><b>1.75</b></td><td><span class="grade-status">In progress</span></td></tr>
+        </tbody></table></div><p class="table-footnote">Note: This portal uses sample academic information for demonstration purposes.</p></article>
+        <footer>© 2026 Campusly Student Portal <span>Made for your academic journey.</span></footer>
+      </section>
+
+      <section class="page" id="announcements"><div class="page-heading"><div><p class="eyebrow">CAMPUS BULLETIN</p><h1>Announcements</h1><p class="subheading">Important news and updates from your school.</p></div><span class="term-pill">3 new updates</span></div>
+        <div class="announcement-page-list">
+          <article class="panel announcement-full"><div class="announcement-banner violet-banner">✦</div><div class="announcement-full-content"><div class="announcement-meta">ACADEMIC OFFICE <span>·</span> NOVEMBER 25, 2026</div><h2>Final examination schedule released</h2><p>The final examination timetable is now available. Please review your assigned dates, times, and examination rooms. Contact the Academic Office if you notice any schedule conflicts.</p><span class="tag">Academic</span></div></article>
+          <article class="panel announcement-full"><div class="announcement-banner green-banner">◎</div><div class="announcement-full-content"><div class="announcement-meta">STUDENT AFFAIRS <span>·</span> NOVEMBER 24, 2026</div><h2>Student organization week</h2><p>Explore student clubs, meet fellow students, and discover opportunities to get involved. Registration booths will be located at the campus activity center.</p><span class="tag green-tag">Student life</span></div></article>
+          <article class="panel announcement-full"><div class="announcement-banner orange-banner">▤</div><div class="announcement-full-content"><div class="announcement-meta">LIBRARY <span>·</span> NOVEMBER 22, 2026</div><h2>Extended library hours during exam week</h2><p>To support your preparation, the campus library will be open until 8:00 PM throughout examination week. Please bring your valid student ID.</p><span class="tag orange-tag">Campus services</span></div></article>
+        </div><footer>© 2026 Campusly Student Portal <span>Made for your academic journey.</span></footer>
+      </section>
+
+      <section class="page" id="profile"><div class="page-heading"><div><p class="eyebrow">YOUR ACCOUNT</p><h1>My profile</h1><p class="subheading">Manage your student information and contact details.</p></div><button class="primary-button" id="editProfile">Edit profile <span>↗</span></button></div>
+        <div class="profile-layout"><article class="panel profile-card"><div class="profile-cover"></div><div class="profile-main"><div class="avatar profile-avatar">SP</div><h2 id="profileName">Szarina Palaca</h2><p class="profile-course">Bachelor of Science in Information Technology</p><span class="status-pill">● Active student</span><div class="profile-id"><span>STUDENT ID</span><strong>2024-00128</strong></div></div></article>
+          <article class="panel details-panel"><div class="panel-heading"><div><h2>Personal information</h2><p>Your registered student details</p></div></div><form id="profileForm" class="profile-form"><label>Full name<input id="nameInput" value="Szarina Palaca" disabled></label><label>Student email<input id="emailInput" type="email" value="szarina.palaca@student.edu" disabled></label><label>Course<input value="BS Information Technology" disabled></label><label>Year level<input value="3rd Year" disabled></label><label>Contact number<input id="phoneInput" value="+63 912 345 6789" disabled></label><label>Academic year<input value="2026–2027" disabled></label><div class="form-actions" id="formActions" hidden><button type="button" class="outline-button" id="cancelEdit">Cancel</button><button class="primary-button" type="submit">Save changes</button></div></form></article></div>
+        <footer>© 2026 Campusly Student Portal <span>Made for your academic journey.</span></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
